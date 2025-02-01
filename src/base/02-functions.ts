@@ -6,11 +6,6 @@ const log = (name: string): void => console.log("Hello", name);
 const crash = (): never => { throw new Error("crash") };
 // will never finish
 
-function print(user: { firstName: string; lastName?: string }): void {
+function print(user: { firstName: string }): void {
   console.log(user.firstName.toUpperCase());
-
-  // need to check out if user.lastName exists
-  if (user.lastName) {
-    console.log(user.lastName.toUpperCase());
-  }
 }
